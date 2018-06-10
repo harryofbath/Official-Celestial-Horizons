@@ -3,8 +3,6 @@ package Game;
 import static org.lwjgl.glfw.GLFW.glfwInit;
 import static org.lwjgl.glfw.GLFW.glfwWindowShouldClose;
 
-import org.lwjgl.opengl.GL;
-
 import Engine.Display;
 import Engine.Load;
 import Engine.RawModel;
@@ -14,22 +12,21 @@ public class gameLoop {
 
 	public static void main(String[] args) {
 		glfwInit();
-		gameLoop loop = new gameLoop();
-		
-		loop.loop();
+		gameLoop.loop();
 		
 	}
 
-	public void loop() {
+	public static void loop() {
 		
 		boolean vsync = true;
-		int WIDTH = 1920;
-		int HEIGHT = 1080;
+		int WIDTH = 1280;
+		int HEIGHT = 720;
+		@SuppressWarnings("unused")
 		int FPS_CAP = 60;
 		String TITLE = "Our First Display";
 
 		Display display = new Display(WIDTH, HEIGHT, TITLE, vsync);
-		
+	
 		
 		
 		
